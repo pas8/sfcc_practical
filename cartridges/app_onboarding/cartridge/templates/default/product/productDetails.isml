@@ -145,4 +145,5 @@
             </div>
         </div>
     </isobject>
+            <isinclude template="product/components/notifyMeDialog" />
 </isdecorate>
