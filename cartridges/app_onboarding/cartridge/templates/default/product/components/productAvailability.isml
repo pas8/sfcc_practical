@@ -10,3 +10,12 @@
         </isif>
     </div>
 </div>
+
+
+<isif condition="${!isQuickView}">
+    <div class="row">
+        <div class="col">
+            <isinclude template="giftRegistry/components/addToRegistryButton" />
+        </div>
+    </div>
+</isif>

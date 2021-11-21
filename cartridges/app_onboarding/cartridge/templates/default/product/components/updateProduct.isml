@@ -2,4 +2,6 @@
     <isinclude template="product/components/updateCartProduct" />
 <iselse>
     <isinclude template="product/components/updateWishlistProduct" />
+    <isinclude template="product/components/updateGiftRegistryProduct" />
 </isif>
+
