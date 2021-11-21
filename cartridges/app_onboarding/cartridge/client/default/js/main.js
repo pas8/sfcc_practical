@@ -1,17 +1,18 @@
 window.jQuery = window.$ = require('jquery');
-var processInclude = require('base/util');
+var processInclude = require('./util');
 
 $(document).ready(function () {
-    processInclude(require('base/components/menu'));
-    processInclude(require('base/components/cookie'));
-    processInclude(require('base/components/consentTracking'));
-    processInclude(require('base/components/footer'));
+    processInclude(require('./components/menu'));
+    processInclude(require('./components/cookie'));
+    processInclude(require('./components/consentTracking'));
+    processInclude(require('./components/footer'));
     processInclude(require('./components/miniCart'));
-    processInclude(require('base/components/collapsibleItem'));
-    processInclude(require('base/components/search'));
-    processInclude(require('base/components/clientSideValidation'));
-    processInclude(require('base/components/countrySelector'));
+    processInclude(require('./components/collapsibleItem'));
+    processInclude(require('./components/search'));
+    processInclude(require('./components/clientSideValidation'));
+    processInclude(require('./components/countrySelector'));
+    processInclude(require('./components/toolTip'));
 });
 
-require('base/thirdParty/bootstrap');
-require('base/components/spinner');
+require('./thirdParty/bootstrap');
+require('./components/spinner');

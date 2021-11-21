@@ -52,8 +52,8 @@ module.exports = {
                 dataType: 'json',
                 data: {
                     pid: pid,
-                    // optionId: optionId,
-                    // optionVal: optionVal
+                    optionId: optionId,
+                    optionVal: optionVal
                 },
                 success: function (data) {
                     displayMessage(data, button);
