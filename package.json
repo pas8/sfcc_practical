@@ -32,6 +32,7 @@
     "last 2 versions",
     "ie >= 10"
   ],
+  
   "paths": {
     "base": "../storefront-reference-architecture/cartridges/app_storefront_base/"
   },
