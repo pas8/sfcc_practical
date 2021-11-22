@@ -37,8 +37,8 @@ function getAllAttrValues(
     quantity
 ) {
     var attrValues = variationModel.getAllValues(attr);
-    var actionEndpoint = 'Product-' + endPoint;
 
+    var actionEndpoint = 'Product-' + endPoint;
     return collections.map(attrValues, function (value) {
         var isSelected = (selectedValue && selectedValue.equals(value)) || false;
         var valueUrl = '';
@@ -63,7 +63,9 @@ function getAllAttrValues(
 
             
             processedAttr.availability = 'dude'
-            // processedAttr.availability = ProductFactory.get(valueUrl.split('?')[1])
+            var g =  valueUrl.split('?')[1]
+            
+            // processedAttr.availability = ProductFactory.get(g)
         }
 
         if (isSwatchable(attr.attributeID)) {
