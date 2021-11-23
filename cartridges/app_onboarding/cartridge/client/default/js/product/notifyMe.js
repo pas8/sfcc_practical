@@ -4,6 +4,8 @@
 
 
 
+
+
 var get$Dialog = () => $('#notifyMeDialog')
 
 $('.select-size').on('change', (__) => {
@@ -14,8 +16,22 @@ $('.select-size').on('change', (__) => {
 
   document.querySelector('.modal-background').style.display = 'block'
 
+});
+
+[...document.querySelector('.select-size').children].forEach(el => {
+  var url = el.getAttribute('value')
+
+  $.ajax({
+    url: url,
+    type: 'get',
+    success: (data) => {
+      !data.product.available && el.setAttribute('disabled', '')
+
+    }
+  })
 
 });
+
 
 
 var setSuccessNotifyMeMessage = (parent) => {
@@ -47,8 +63,6 @@ var setSuccessNotifyMeMessage = (parent) => {
 
     $(parent.querySelector('.modal-body').children[1]).remove()
   })
-
-
 
 }
 
