@@ -11,6 +11,8 @@
     "compile:scss": "sgmf-scripts --compile css"
   },
   "paths": {
+    "plugin_giftregistry": "../plugin_giftregistry/cartridges/plugin_giftregistry/",
+    "plugin_wishlists": "../plugin_wishlists/cartridges/plugin_wishlists/",
     "base": "../storefront-reference-architecture/cartridges/app_storefront_base/"
   },
   "devDependencies": {
