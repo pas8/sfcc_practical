@@ -30,6 +30,7 @@
                     <span id="${attrValue.id}" class="sr-only selected-assistive-text">
                         ${attrValue.selected ? Resource.msg('msg.assistive.selected.text', 'common', null) : ''}
                     </span>
+                    <div>${attrValue.hitCount}</div>
                 </button>
             </isif>
         </isloop>
@@ -50,7 +51,7 @@
                     ${!attrValue.selectable ? 'disabled' : ''}
                     ${attrValue.selected ? 'selected' : ''}
                 >
-                    ${JSON.stringify(attrValue)}
+                    ${attrValue.displayValue + attrValue.hitCount}
                 </option>
             </isloop>
         </select>
