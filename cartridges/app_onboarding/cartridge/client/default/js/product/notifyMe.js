@@ -20,7 +20,6 @@ $('.select-size').on('change', (__) => {
 
 [...document.querySelector('.select-size').children].forEach(el => {
   var url = el.getAttribute('value')
-
   $.ajax({
     url: url,
     type: 'get',
@@ -69,8 +68,13 @@ var setSuccessNotifyMeMessage = (parent) => {
 $('#notifyMeDialogForm').submit(function (e) {
   var form = $(this);
   e.preventDefault();
-  var url = form.attr('action');
+  var pId = window.location.search
+
+  var url = form.attr('action') + pId
   form.spinner().start();
+
+
+
 
   $.ajax({
     url: url,
