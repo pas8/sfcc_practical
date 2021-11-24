@@ -7,8 +7,5 @@
       <div class="col">
             <isinclude template="wishlist/components/addToWishListButton" />
         </div>
-        <div class="col">
-            <isinclude template="giftRegistry/components/addToRegistryButton" />
-        </div>
     </div>
 </isif>

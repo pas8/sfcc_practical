@@ -20,7 +20,6 @@
             <div class="gift-registry-list-account-card" data-error-msg="${Resource.msg('removeGiftRegistry.failure.msg','giftRegistry',null)}">
                 <isinclude template="account/giftRegistry/listCards"/>
             </div>
-            <isinclude template="giftRegistry/removeGiftRegistryModal"/>
         </isif>
         <isif condition="${pdict.account.wishlist}">
             <div class="wishlist-account-card" data-error-msg="${Resource.msg('wishlist.removefromwishlist.failure.msg','wishlist',null)}">
