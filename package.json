@@ -38,6 +38,7 @@
     "ie >= 10"
   ],
   "dependencies": {
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "bootstrap": "^4.6.0"
   }
 }

@@ -5,12 +5,8 @@ var base = module.superModule
 
 function productsListItem(productsListItemObj) {
 
-
-
   var Site = require('dw/system/Site')
   var Transaction = require('dw/system/Transaction')
-
-
 
   base.call(this, productsListItemObj)
   if (!productsListItemObj) return;
@@ -28,7 +24,7 @@ function productsListItem(productsListItemObj) {
     return;
   }
 
-  this.productListItem.daysLeft = daysLeft
+  this.productListItem.daysLeft = 2
 
 
 }
