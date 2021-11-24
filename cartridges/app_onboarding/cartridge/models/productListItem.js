@@ -24,7 +24,7 @@ function productsListItem(productsListItemObj) {
     return;
   }
 
-  this.productListItem.daysLeft = 2
+  this.productListItem.daysLeft = ~~daysLeft
 
 
 }
