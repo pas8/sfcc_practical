@@ -28,15 +28,20 @@ var useRipple = function (button_node, fn, is_prevent_default = true) {
 
 
 
-var compareButton = document.querySelector('add_to_compare_button')
+var compareButton = document.getElementById('add_to_compare_button')
 
 useRipple(compareButton, function () {
+  var pId = window.location.search
 
-  var url = compareButton.getAttribute('data-url')
+  var url = compareButton.getAttribute('data-url') + pId
+
   $.ajax({
     url: url,
-    type: 'get',
+    type: 'post',
     success: function (data) {
+      console.log(data)
+    },
+    error: function (data) {
       console.log(data)
     }
   })

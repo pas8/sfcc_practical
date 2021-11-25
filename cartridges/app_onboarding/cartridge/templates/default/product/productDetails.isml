@@ -108,6 +108,7 @@
                                 <isinclude template="product/components/promotions" />
                             </div>
                         </div>
+                            <isinclude template="product/components/addToCompare" />
 
                         <div class="prices-add-to-cart-actions">
                             <div class="row">
@@ -122,7 +123,6 @@
 
                             <!-- Cart and [Optionally] Apple Pay -->
                             <isinclude template="product/components/addToCartProduct" />
-                            <isinclude template="product/components/addToCompare" />
                         </div>
 
                         <!-- Social Sharing Icons -->
