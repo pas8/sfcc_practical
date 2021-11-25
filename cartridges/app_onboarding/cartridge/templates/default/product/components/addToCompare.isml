@@ -1,0 +1,1 @@
+<button class="btn btn-primary" data-url='${pdict.compareActionUrl}' id='add_to_compare_button'>${Resource.msg('product.button.text','compare',null)} </button>
