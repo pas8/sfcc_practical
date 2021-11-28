@@ -5,6 +5,8 @@ var server = require('server')
 var TRANSACTION = require('dw/system/Transaction')
 var productListMgr = require('dw/customer/ProductListMgr');
 var ProductMgr = require('dw/catalog/ProductMgr');
+var CCompareModel = require('*/cartridge/models/ccompare');
+var PCompareModel = require('*/cartridge/models/pcompare');
 
 
 
@@ -82,17 +84,28 @@ var getCompareProducts = function (currentCustomer) {
   return compareProducts
 }
 
-server.get('Show', function (req, res, next) {
-
+server.get('CShow', function (req, res, next) {
 
   var currentCustomer = req.currentCustomer.raw
 
+  var compareProducts = getCompareProducts(currentCustomer)
+  var CCM = new CCompareModel(compareProducts)
+
+
+  res.render('compare/ccomparePage', CCM);
+  next();
+})
+
+
+server.get('PShow', function (req, res, next) {
+
+  var currentCustomer = req.currentCustomer.raw
 
   var compareProducts = getCompareProducts(currentCustomer)
+  var PCM = new PCompareModel(req,compareProducts)
 
-  res.json({
-    compareProducts: compareProducts
-  });
+
+  res.render('compare/pcomparePage', PCM);
   next();
 })
 

@@ -1,0 +1,16 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js')
+
+        assets.addJs('/js/ccompare.js')
+        assets.addCss('/css/ccompare.css')
+    </isscript>
+    <h1>Compare page</h1>
+    <div class="container">
+    
+      <isloop items="${pdict.compareArr}" var="item" status="loopstatus">
+          <a class="btn ct_button btn-primary" href="${item.url}">${item.categoryDisplayName}</a>
+      </isloop>
+    </div>
+
+</isdecorate>

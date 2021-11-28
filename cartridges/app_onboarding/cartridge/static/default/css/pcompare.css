@@ -1,0 +1,16 @@
+.maincontent {
+  flex-grow: 1;
+
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ct_button {
+}
+
+
+.maincontent {
