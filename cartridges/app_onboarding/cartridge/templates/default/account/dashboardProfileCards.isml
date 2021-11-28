@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-sm-6">
+
+        <isif condition="${!pdict.account.isExternallyAuthenticated}">
+            <isinclude template="account/passwordCard"/>
+        </isif>
+        <isinclude template="account/profileCard"/>
+
+
+        <isinclude template="account/addressBookCard"/>
+    </div>
+    <div class="col-sm-6">
+        <isif condition="${pdict.account.orderHistory}">
+            <isset name="order" value="${pdict.account.orderHistory}" scope="page"/>
+            <isinclude template="account/order/orderHistoryCard"/>
+        </isif>
+        <isinclude template="account/paymentCard"/>
+
+        <isif condition="${pdict.account.giftRegistryList}">
+            <div class="gift-registry-list-account-card" data-error-msg="${Resource.msg('removeGiftRegistry.failure.msg','giftRegistry',null)}">
+                <isinclude template="account/giftRegistry/listCards"/>
+            </div>
+            <isinclude template="giftRegistry/removeGiftRegistryModal"/>
+        </isif>
+        <isif condition="${pdict.account.wishlist}">
+            <div class="wishlist-account-card" data-error-msg="${Resource.msg('wishlist.removefromwishlist.failure.msg','wishlist',null)}">
+                <isinclude template="account/wishlist/listCards"/>
+            </div>
+        </isif>
+    </div>
+</div>
