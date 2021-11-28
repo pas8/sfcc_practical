@@ -1,0 +1,27 @@
+<div class="carousel slide home_carousel" data-ride="carousel">
+  <div class="carousel-inner">
+<iscomment> 
+  <isscript>
+      var assets = require('*/cartridge/scripts/assets.js')
+      assets.addCss('/css/homeCarousel.css')
+  </isscript> </iscomment>
+
+    <isloop items="${['/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637773786201-a677bac859f3.jpeg____/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637776895052-86e559e887b4.jpeg','/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637580980556-085dee659c7e.jpeg?version=1.637.832.850.000____/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637795065483-b234aa446fea.jpeg']}" var="str" status="loopstatus" >
+      <div class="carousel-item ${loopstatus.index === 0 ? 'active' :  ''}" >
+      <isset name="arr" value="${str.split('____')}" scope="page" />
+        <div>
+          <img src='${arr[0]}'/>
+          <img src='${arr[1]}'/>
+        </div>
+    </div>
+    </isloop>
+  </div>
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
+</div>
