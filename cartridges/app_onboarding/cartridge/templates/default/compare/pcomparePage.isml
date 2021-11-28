@@ -6,10 +6,31 @@
         assets.addCss('/css/pcompare.css')
     </isscript>
     <div>
+         <table>
 
-      <isloop items="${pdict.cProducts}" var="item" status="loopstatus">
-          <button class="btn ct_button btn-primary" >${item}</button>
-      </isloop> 
+        <td>
+            <th>Products</th>
+            <isloop items="${pdict.cProducts}" var="item" status="loopstatus">
+                <tr>
+                    <div>${item.name}</div>
+                    <img src='${item.image}'/>
+                </tr>
+            </isloop> 
+        </td>
+        <isloop items="${pdict.pKeys}" var="key" status="loopstatus">
+            <td>
+                <th>${key}</th>
+                <isloop items="${pdict.pValues[key]}" var="item" status="loopstatus">
+                ${pdict.pValues.brand}
+                    <tr>
+                        <div>${item}</div>
+                    </tr>
+                </isloop> 
+
+            </td>
+        </isloop> 
+        </table> 
     </div>
+
 
 </isdecorate>

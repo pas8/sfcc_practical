@@ -20,7 +20,7 @@ var makeArrayUniq = function (arrArg) {
 function CompareModel(req, compareProducts) {
 
   var compareObj = {
-    products:[]
+    products: []
   }
 
   makeArrayUniq(compareProducts).forEach(function (product) {
@@ -33,20 +33,23 @@ function CompareModel(req, compareProducts) {
 
   })
 
+  var pValues = {
+
+    brand: [],
+    price: []
+  }
 
   var cProducts = compareObj.products.map(function (product) {
     var priceModel = product.getPriceModel()
 
-    var properiesObj = {
-      brand: product.getBrand(),
-      price: priceModel.getPrice()
-    }
+    pValues.brand.push(product.getBrand())
+    pValues.price.push(priceModel.getPrice())
+
     var result = {
       name: product.getName(),
       id: generateID(),
       image: product.getImage('medium').URL.toString(),
       productId: product.getID(),
-      properiesObj: properiesObj,
     }
 
 
@@ -54,6 +57,8 @@ function CompareModel(req, compareProducts) {
   })
 
   this.cProducts = cProducts
+  this.pValues = pValues
+this.pKeys = Object.keys(pValues)
 
 }
 
