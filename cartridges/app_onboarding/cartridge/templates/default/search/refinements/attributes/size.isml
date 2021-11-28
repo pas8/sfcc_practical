@@ -10,7 +10,7 @@
 
         <span aria-hidden="true" class="${refinementValue.swatchId}<isif condition="${refinementValue.selected && refinementValue.selectable}">selected</isif>">
             ${refinementValue.displayValue} 
-        <isif condition="${!require('app_onboarding/cartridge/utils/mobileChecker').isMobile()}">
+        <isif condition="${!require('app_onboarding/cartridge/scripts/utils/mobileChecker').isMobile()}">
           (${refinementValue.hitCount})
         </isif>
         </span>

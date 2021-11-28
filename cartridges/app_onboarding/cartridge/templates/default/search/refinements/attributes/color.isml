@@ -1,6 +1,6 @@
 <li class="color-attribute ${!refinementValue.selectable ? 'disabled' : ''}">
     <button data-href="${refinementValue.url}">
-    	<isif condition="${!require('app_onboarding/cartridge/utils/mobileChecker').isMobile()}">
+    	<isif condition="${!require('app_onboarding/cartridge/scripts/utils/mobileChecker').isMobile()}">
 	        ${refinementValue.displayValue} (${refinementValue.hitCount})
 	    <iselse>
 	    	<span class="${refinementValue.swatchId} swatch-circlecolor-value  swatch-mark
