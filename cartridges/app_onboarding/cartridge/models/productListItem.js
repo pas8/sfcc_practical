@@ -6,7 +6,7 @@ var base = module.superModule
 function productsListItem(productsListItemObj) {
 
   var Site = require('dw/system/Site')
-  var Transaction = require('dw/system/Transaction')
+  var TRANSACTION = require('dw/system/Transaction')
 
   base.call(this, productsListItemObj)
   if (!productsListItemObj) return;
@@ -19,15 +19,12 @@ function productsListItem(productsListItemObj) {
   var daysLeft = WISLIST_EXPIRATION_DATE - LAST_MODIFIED_DATE
 
   if (daysLeft < 0) {
-    Transaction.wrap(function () { productsListItemObj.list.removeItem(productsListItemObj) })
+    TRANSACTION.wrap(function () { productsListItemObj.list.removeItem(productsListItemObj) })
     this.productsListItem = null
     return;
   }
 
   this.productListItem.daysLeft = ~~daysLeft
-
-
 }
-
 
 module.exports = productsListItem

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <attribute-definition attribute-id="expirationDaysOfwishlist">
+        <display-name xml:lang="x-default">expirationDaysOfwishlistName</display-name>
+        <description xml:lang="x-default">expirationDaysOfwishlistText</description>
+        <type>double</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <min-value>1.0</min-value>
+        <default-value>8.0</default-value>
+    </attribute-definition>
+</metadata>
