@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+
+
+
+    <slot-configuration slot-id="home-carousel" context="global" configuration-id="DesktopSlider" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;style&gt;
+	.carousel-item { width: 100vw; height: 100vh; } .carousel-item img { width: 50%; object-fit: cover; height: 100%; } .carousel-control-prev, .carousel-control-next { background-color: transparent; border: none; } .active { display: flex !important; }
+&lt;/style&gt;
+&lt;div class="carousel slide home_carousel pointer-event" data-ride="carousel"&gt;
+	&lt;div class="carousel-inner"&gt;
+		&lt;div class="carousel-item active"&gt;
+			&lt;img src="/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637773786201-a677bac859f3.jpeg"&gt;
+			&lt;img src="/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637776895052-86e559e887b4.jpeg"&gt;
+		&lt;/div&gt;
+		&lt;div class="carousel-item "&gt;
+			&lt;img src="/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637580980556-085dee659c7e.jpeg?version=1.637.832.850.000"&gt;
+			&lt;img src="/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637795065483-b234aa446fea.jpeg"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev"&gt;
+		&lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+		&lt;span class="sr-only"&gt;Previous&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next"&gt;
+		&lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+		&lt;span class="sr-only"&gt;Next&lt;/span&gt;
+	&lt;/button&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableAddToCart">false</custom-attribute>
+            <custom-attribute attribute-id="disableAltImgOnHover">false</custom-attribute>
+            <custom-attribute attribute-id="disableName">false</custom-attribute>
+            <custom-attribute attribute-id="disablePricing">false</custom-attribute>
+            <custom-attribute attribute-id="disablePromotion">false</custom-attribute>
+            <custom-attribute attribute-id="disableRating">false</custom-attribute>
+            <custom-attribute attribute-id="disableScroll">false</custom-attribute>
+            <custom-attribute attribute-id="disableSubtitle">false</custom-attribute>
+            <custom-attribute attribute-id="disableSwatches">false</custom-attribute>
+            <custom-attribute attribute-id="enableControls">false</custom-attribute>
+            <custom-attribute attribute-id="linkOnSubtitle">false</custom-attribute>
+            <custom-attribute attribute-id="openProductPdpPage">false</custom-attribute>
+            <custom-attribute attribute-id="showSelectedSwatchOnly">false</custom-attribute>
+            <custom-attribute attribute-id="useForDataCollectionOnly">false</custom-attribute>
+            <custom-attribute attribute-id="useSnippets">false</custom-attribute>
+            <custom-attribute attribute-id="vertical">false</custom-attribute>
+            <custom-attribute attribute-id="wordBreak">false</custom-attribute>
+        </custom-attributes>
+        <customer-groups>
+            <customer-group group-id="DesktopUsers"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="error-banner-m" context="global" configuration-id="Error Banner" assigned-to-site="false">
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html/>
+        </content>
+    </slot-configuration>
+
+
+    <slot-configuration slot-id="home-carousel" context="global" configuration-id="MobileSlider" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;style&gt;
+	.carousel-item {
+	  width: 100vw;
+	  height: 100vh;
+	}
+	.carousel-item img {
+	  width: 100%;
+	  object-fit: cover;
+	  height: 100%;
+	}
+	
+	.carousel-control-prev,
+	.carousel-control-next {
+	  background-color: transparent;
+	  border: none;
+	}
+	
+	.active {
+	  display: flex !important;
+	}
+&lt;/style&gt;
+&lt;div class="carousel slide home_carousel pointer-event" data-ride="carousel"&gt;
+	&lt;div class="carousel-inner"&gt;
+		&lt;div class="carousel-item active"&gt;
+			&lt;img src="/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637773786201-a677bac859f3.jpeg"&gt;
+		&lt;/div&gt;
+		&lt;div class="carousel-item "&gt;
+			&lt;img src="/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637776895052-86e559e887b4.jpeg"&gt;
+		&lt;/div&gt;
+		&lt;div class="carousel-item "&gt;
+			&lt;img src="/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637580980556-085dee659c7e.jpeg?version=1.637.832.850.000"&gt;
+		&lt;/div&gt;
+		&lt;div class="carousel-item "&gt;
+			&lt;img src="/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637795065483-b234aa446fea.jpeg"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev"&gt;
+		&lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+		&lt;span class="sr-only"&gt;Previous&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next"&gt;
+		&lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+		&lt;span class="sr-only"&gt;Next&lt;/span&gt;
+	&lt;/button&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <custom-attributes>
+            <custom-attribute attribute-id="backgroundColor">red</custom-attribute>
+            <custom-attribute attribute-id="carouselCustomCssClass">carousel</custom-attribute>
+            <custom-attribute attribute-id="disableAddToCart">false</custom-attribute>
+            <custom-attribute attribute-id="disableAltImgOnHover">false</custom-attribute>
+            <custom-attribute attribute-id="disableName">false</custom-attribute>
+            <custom-attribute attribute-id="disablePricing">false</custom-attribute>
+            <custom-attribute attribute-id="disablePromotion">false</custom-attribute>
+            <custom-attribute attribute-id="disableRating">false</custom-attribute>
+            <custom-attribute attribute-id="disableScroll">false</custom-attribute>
+            <custom-attribute attribute-id="disableSubtitle">false</custom-attribute>
+            <custom-attribute attribute-id="disableSwatches">false</custom-attribute>
+            <custom-attribute attribute-id="enableControls">false</custom-attribute>
+            <custom-attribute attribute-id="linkOnSubtitle">false</custom-attribute>
+            <custom-attribute attribute-id="openProductPdpPage">false</custom-attribute>
+            <custom-attribute attribute-id="showSelectedSwatchOnly">false</custom-attribute>
+            <custom-attribute attribute-id="useForDataCollectionOnly">false</custom-attribute>
+            <custom-attribute attribute-id="useSnippets">false</custom-attribute>
+            <custom-attribute attribute-id="vertical">false</custom-attribute>
+            <custom-attribute attribute-id="wordBreak">false</custom-attribute>
+        </custom-attributes>
+        <customer-groups>
+            <customer-group group-id="MobileUsers"/>
+        </customer-groups>
+    </slot-configuration>
+
+
+
+
+
+    <slot-configuration slot-id="home-carousel" context="global" configuration-id="Static" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;style&gt;
+	.static-item {
+	  width: 100vw;
+	  height: 100vh;
+	}
+	.static-item img {
+	  width: 100%;
+	  object-fit: cover;
+	  height: 100%;
+	}
+&lt;/style&gt;
+&lt;div class="static-item"&gt;
+	&lt;img src="/on/demandware.static/-/Sites-RefArch-Library/default/v067e12fa7fc13ba12c0989024f4809ff0f31956d/photo-1637773786201-a677bac859f3.jpeg"&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableAddToCart">false</custom-attribute>
+            <custom-attribute attribute-id="disableAltImgOnHover">false</custom-attribute>
+            <custom-attribute attribute-id="disableName">false</custom-attribute>
+            <custom-attribute attribute-id="disablePricing">false</custom-attribute>
+            <custom-attribute attribute-id="disablePromotion">false</custom-attribute>
+            <custom-attribute attribute-id="disableRating">false</custom-attribute>
+            <custom-attribute attribute-id="disableScroll">false</custom-attribute>
+            <custom-attribute attribute-id="disableSubtitle">false</custom-attribute>
+            <custom-attribute attribute-id="disableSwatches">false</custom-attribute>
+            <custom-attribute attribute-id="enableControls">false</custom-attribute>
+            <custom-attribute attribute-id="linkOnSubtitle">false</custom-attribute>
+            <custom-attribute attribute-id="openProductPdpPage">false</custom-attribute>
+            <custom-attribute attribute-id="showSelectedSwatchOnly">false</custom-attribute>
+            <custom-attribute attribute-id="useForDataCollectionOnly">false</custom-attribute>
+            <custom-attribute attribute-id="useSnippets">false</custom-attribute>
+            <custom-attribute attribute-id="vertical">false</custom-attribute>
+            <custom-attribute attribute-id="wordBreak">false</custom-attribute>
+        </custom-attributes>
+    </slot-configuration>
+
+
+</slot-configurations>
