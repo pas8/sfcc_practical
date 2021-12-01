@@ -1,3 +1,0 @@
-<isif condition="${!!pdict.wishlist.length}">
-(<span id='wishlistLengthNumber'><isprint value="${pdict.wishlist.length}" encoding="on" /></span> products)
-</isif>
