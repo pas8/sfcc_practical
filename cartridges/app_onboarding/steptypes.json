@@ -20,8 +20,7 @@
             {
               "@name":"CustomObjectType",
               "@type":"string",
-              "@required":"false",
-              "description":"The Custom Object type to delete instances on this site."
+              "@required":"true"
             }
           ]
         },

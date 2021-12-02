@@ -3,8 +3,6 @@
 
 var server = require('server')
 
-
-
 server.extend(module.superModule)
 
 server.prepend('PlaceOrder', function (req, res, next) {
