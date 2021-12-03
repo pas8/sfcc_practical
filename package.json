@@ -15,7 +15,6 @@
     "plugin_wishlists": "../plugin_wishlists/cartridges/plugin_wishlists/",
     "base": "../storefront-reference-architecture/cartridges/app_storefront_base/"
   },
-  "hooks": "./hooks.json",
   "devDependencies": {
     "eslint": "^3.2.2",
     "eslint-config-airbnb-base": "^5.0.1",

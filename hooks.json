@@ -1,8 +1,0 @@
-{
-  "hooks": [
-      {
-          "name": "shareProduct.email",
-          "script": "./cartridge/scripts/hooks/shareProductEmail.hook.js"
-      }
-  ]
-}

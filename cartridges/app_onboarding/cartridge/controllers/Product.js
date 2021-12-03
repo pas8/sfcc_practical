@@ -14,7 +14,7 @@ server.append('Show', function (req, res, next) {
 
   var idOfShareProductForm = 'shareProductForm'
   viewData.shareProductActionUrl = shareProductActionUrl
-  viewData[idOfShareProductForm] = shareProductForm
+  viewData.shareProductForm = shareProductForm
   viewData.idOfShareProductForm = idOfShareProductForm
 
   res.setViewData(viewData)

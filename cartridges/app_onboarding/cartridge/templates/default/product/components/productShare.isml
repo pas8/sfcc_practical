@@ -7,7 +7,7 @@
             ${Resource.msg('dialog.title','share_product',null)}
           </h5>
         </div>
-          <form action="${pdict.shareProductActionUrl}" id=${pdict.idOfShareProductForm}  class="shareProduct-form" <isprint value="${pdict.shareProductForm.attributes}" encoding="off" />>
+          <form action="${pdict.shareProductActionUrl}" id='${pdict.idOfShareProductForm}'  class="shareProduct-form" <isprint value="${pdict.shareProductForm.attributes}" encoding="off" />>
 
         <div class="modal-body">
           <div class="form-group required">
@@ -32,7 +32,7 @@
         </div>
         <div class="modal-footer">
             <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
-            <button type="submit" id='shareProductSubmitButton' data-formid='${idOfShareProductForm}'  class="btn btn-block btn-primary">${Resource.msg('button.submit.text', 'share_product', null)}</button>
+            <button type="submit" id='shareProductSubmitButton' data-formid='${pdict.idOfShareProductForm}'  class="btn btn-block btn-primary">${Resource.msg('button.submit.text', 'share_product', null)}</button>
         </div>
           </form>
       </div>

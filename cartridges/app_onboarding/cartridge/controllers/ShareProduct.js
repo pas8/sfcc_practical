@@ -9,21 +9,22 @@ server.post('Validate',
 
     if (form.valid) {
 
-      var HookMgr = require('dw/system/HookMgr')
       var TRANSACTION = require('dw/system/Transaction');
 
       try {
         TRANSACTION.wrap(function () {
-          HookMgr.call('shareProduct.email', {
-            email: form.email.value,
-            previewTitle: form.previewTitle.value,
-            PID:req.querystring.pid
+      var HookMgr = require('dw/system/HookMgr')
+          HookMgr.call('shareProduct.email', 'send', {
+            email: form.email.htmlValue,
+            previewTitle: form.previewTitle.htmlValue,
+            PID: req.querystring.pid
           })
         })
 
       } catch (error) {
-
+        var f = error
         res.json({
+          error:error,
           success: false
         })
       }
