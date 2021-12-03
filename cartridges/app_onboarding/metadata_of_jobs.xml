@@ -1,0 +1,32 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <jobs xmlns="http:www.demandware.com/xml/impex/jobs/2015-07-01">
+         <job job-id="OrdersUploader" priority="0">
+         <description/>
+         <parameters/>
+         <flow>
+             <context site-id="RefArch"/>
+             <step step-id="MainStep" type="custom.ordersUploader" enforce-restart="false">
+                 <description/>
+                 <parameters/>
+                 <rules>
+                     <on-exit status="ERROR">
+                         <stop-job/>
+                     </on-exit>
+                 </rules>
+             </step>
+         </flow>
+         <rules/>
+         <triggers>
+             <run-recurring enabled="false">
+                 <recurrence>
+                     <date-from>2021-12-02Z</date-from>
+                     <date-to>2022-05-03Z</date-to>
+                     <start-time>20:58:57.000Z</start-time>
+                     <interval>1m</interval>
+                     <day-of-week/>
+                 </recurrence>
+             </run-recurring>
+         </triggers>
+     </job>
+ </jobs>
+
