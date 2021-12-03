@@ -23,11 +23,11 @@ module.exports = {
 
       while (seekableIterator.hasNext()) {
         var order = seekableIterator.next();
-        var orderItem = order.getOrderItem(null)
+        // var orderItem = order.getOrderItem(null)
 
         var strArr = [
           // orderItem.getItemID(),
-          order.getOrderNo(),
+          order.getUUID(),
           order.getCustomerName(),
           order.getCustomerEmail(),
           order.getAllProductLineItems().length,
