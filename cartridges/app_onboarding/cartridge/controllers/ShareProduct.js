@@ -13,7 +13,7 @@ server.post('Validate',
 
       try {
         TRANSACTION.wrap(function () {
-      var HookMgr = require('dw/system/HookMgr')
+          var HookMgr = require('dw/system/HookMgr')
           HookMgr.callHook('shareProduct.email', 'send', {
             email: form.email.htmlValue,
             previewTitle: form.previewTitle.htmlValue,
@@ -25,9 +25,8 @@ server.post('Validate',
         })
 
       } catch (error) {
-        var f = error
         res.json({
-          error:error,
+          error: error,
           success: false
         })
       }
