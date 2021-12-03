@@ -11,8 +11,11 @@ server.append('Show', function (req, res, next) {
   shareProductForm.clear()
 
   var shareProductActionUrl = URLUtils.url('ShareProduct-Validate')
+
+  var idOfShareProductForm = 'shareProductForm'
   viewData.shareProductActionUrl = shareProductActionUrl
-  viewData.shareProductForm = shareProductForm
+  viewData[idOfShareProductForm] = shareProductForm
+  viewData.idOfShareProductForm = idOfShareProductForm
 
   res.setViewData(viewData)
   next()
