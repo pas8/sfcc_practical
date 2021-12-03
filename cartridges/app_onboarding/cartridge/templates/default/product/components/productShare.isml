@@ -38,7 +38,7 @@
       </div>
     </div>
   </div>
-  <div class="toast rounded border border-primary" role="alert" id='shareProductToast'>
+  <div class="toast rounded border border-primary position-fixed" role="alert" id='shareProductToast'>
     <div class="toast-body">
     </div>
   </div>

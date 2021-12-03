@@ -13,17 +13,18 @@ exports.send = function (params) {
   var email = new Mail();
   var product = ProductMgr.getProduct(params.PID)
 
-  var imageURL = product.getImage('medium').getURL()
+  var imageURL = product.getImage('medium').getImageURL({scaleWidth: 420, format: 'jpg'})
+  var priceModel =  product.getPriceModel().getMinPrice()
   var content = '<div>' +
-    '<h1>' + product.getName() + '</h1>'
-  '<img src="' + imageURL + '" />'
-  '' +
-  '</div>'
+    '<h1>' + product.getName() + '</h1>' +
+    '<img src="' + imageURL + '" />' +
+    '<h2> Price:' +priceModel.value + priceModel.currencyCode +'</h2>' 
+    '</div>'
 
 
   email.addTo(customerEmail);
   email.setFrom(Site.current.getCustomPreferenceValue('customerServiceEmail'));
   email.setSubject(params.previewTitle);
-  email.setContent(content);
+  email.setContent(content,'text/html', 'UTF-8');
   email.send();
 }
