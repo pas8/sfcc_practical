@@ -9,7 +9,6 @@ shareProductOpenerButton.addEventListener('click', () => {
 })
 var submitButton = document.getElementById('shareProductSubmitButton')
 submitButton.addEventListener('click', (e) => {
-    console.log(';')
     e.preventDefault()
     var formID = submitButton.getAttribute('data-formid')
 
@@ -21,8 +20,8 @@ submitButton.addEventListener('click', (e) => {
         data: form.serialize(),
         dataType: 'json',
         success: (data) => {
-            $('#shareProductToast').children().html(data.success ? 'Shared product was send' : 'Something went wrong')
             $('#shareProductToast').toast('show')
+            // $('#shareProductToast').children().html(data.success ? 'Shared product was send' : 'Something went wrong')
 
         }
     })

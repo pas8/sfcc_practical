@@ -13,16 +13,17 @@ exports.send = function (params) {
   var email = new Mail();
   var product = ProductMgr.getProduct(params.PID)
 
-  var imageURL = product.getImage('medium').getImageURL()
+  var imageURL = product.getImage('medium').getURL()
   var content = '<div>' +
     '<h1>' + product.getName() + '</h1>'
   '<img src="' + imageURL + '" />'
   '' +
   '</div>'
 
+
   email.addTo(customerEmail);
   email.setFrom(Site.current.getCustomPreferenceValue('customerServiceEmail'));
   email.setSubject(params.previewTitle);
-  email.setContent(content, 'text/html', 'UTF-8');
+  email.setContent(content);
   email.send();
 }

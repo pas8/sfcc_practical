@@ -14,11 +14,14 @@ server.post('Validate',
       try {
         TRANSACTION.wrap(function () {
       var HookMgr = require('dw/system/HookMgr')
-          HookMgr.call('shareProduct.email', 'send', {
+          HookMgr.callHook('shareProduct.email', 'send', {
             email: form.email.htmlValue,
             previewTitle: form.previewTitle.htmlValue,
             PID: req.querystring.pid
           })
+        })
+        res.json({
+          success: true
         })
 
       } catch (error) {
