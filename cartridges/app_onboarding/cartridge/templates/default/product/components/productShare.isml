@@ -1,0 +1,43 @@
+ <div>
+  <div class="modal" id="shareProductModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            ${Resource.msg('dialog.title','share_product',null)}
+          </h5>
+          <button type="button" class="btn-close"></button>
+        </div>
+          <form action="${pdict.shareProductActionUrl}" id='shareProductForm'  class="shareProduct-form" <isprint value="${pdict.shareProductForm.attributes}" encoding="off" />>
+
+        <div class="modal-body">
+          <div class="form-group required">
+              <label class="form-control-label">
+                  <isprint value="${pdict.shareProductForm.previewTitle.label}" encoding="htmlcontent" />
+              </label>
+              <input type="input" class="form-control" id="shareproduct-form-priewTitle" <isprint value="${pdict.shareProductForm.previewTitle.attributes}" encoding="off" />>
+              <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group required">
+              <label class="form-control-label">
+                  <isprint value="${pdict.shareProductForm.email.label}" encoding="htmlcontent" />
+              </label>
+              <input 
+                  type="email" 
+                  class="form-control" 
+                  id="shareproduct-form-email"
+                  <isprint value="${pdict.shareProductForm.email.attributes}" encoding="off" />>
+              <div class="invalid-feedback"></div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+            <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+            <button type="submit" id=''  class="btn btn-block btn-primary">${Resource.msg('button.submit.text', 'share_product', null)}</button>
+        </div>
+          </form>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-outline-primary full " id='shareProductOpenerButton'>${Resource.msg('button.dialog_opener.text','share_product',null)}</button>
+</div>

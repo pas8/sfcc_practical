@@ -89,9 +89,7 @@
                                 <isinclude template="product/components/options" />
                             </isif>
                         </div>
-                        <div>
-                            <button class="btn " id='shareProductButton'>${Resource.msg('button.text','share_product',null)}</button>
-                        </div>
+                        <isinclude template="product/components/productShare" />
                         <!-- Size Chart -->
                         <isif condition="${product.variationAttributes && product.sizeChartId}">
                             <div class="row">
