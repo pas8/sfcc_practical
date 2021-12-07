@@ -1,37 +1,19 @@
 'use strict';
 
-
-
-
-
-
-
 var get$Dialog = () => $('#notifyMeDialog')
 
-$('.select-size').on('change', (__) => {
-  __.preventDefault()
+$('.select-size').on('change', function (e) {
+  e.preventDefault()
+  var isoptionDisabled = $(this).attr('disabled') !== null;
+  if (!isoptionDisabled) return;
   var notifyMeDialog = get$Dialog()
+
   notifyMeDialog.show()
   notifyMeDialog.addClass('show')
 
   document.querySelector('.modal-background').style.display = 'block'
 
 });
-
-[...document.querySelector('.select-size').children].forEach(el => {
-  var url = el.getAttribute('value')
-  $.ajax({
-    url: url,
-    type: 'get',
-    success: (data) => {
-      !data.product.available && el.setAttribute('disabled', '')
-
-    }
-  })
-
-});
-
-
 
 var setSuccessNotifyMeMessage = (parent) => {
   var submitButton = parent.querySelector('#notifyMeDialogSubmitButton')
@@ -72,9 +54,6 @@ $('#notifyMeDialogForm').submit(function (e) {
 
   var url = form.attr('action') + pId
   form.spinner().start();
-
-
-
 
   $.ajax({
     url: url,
