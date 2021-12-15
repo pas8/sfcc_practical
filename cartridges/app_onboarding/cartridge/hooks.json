@@ -1,0 +1,8 @@
+{
+  "hooks": [
+      {
+          "name": "notifyMe.email",
+          "script": "./cartridge/scripts/hooks/notifyMeEmail.js"
+      }
+  ]
+}
