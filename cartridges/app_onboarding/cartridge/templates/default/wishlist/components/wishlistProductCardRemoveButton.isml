@@ -1,0 +1,6 @@
+<button type="button" class="remove-btn-lg remove-from-wishlist btn btn-light"
+    data-pid="${item.pid}"
+    data-url="${URLUtils.url('Wishlist-RemoveProduct','pid', item.pid)}"
+    aria-label="remove">
+    <span aria-hidden="true">&times;</span>
+</button>
